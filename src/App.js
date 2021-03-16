@@ -10,7 +10,7 @@ class App extends Component {
       { name: 'Stephanie', age: 26 }
     ],
     otherState: 'some other value',
-    showPersons: false
+    showPersons: false,
   };
 
   nameChangedHandler = (event) => {
