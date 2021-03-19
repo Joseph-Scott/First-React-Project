@@ -13,7 +13,8 @@ class App extends Component {
     showPersons: false,
   };
 
-  nameChangedHandler = (event) => {
+  nameChangedHandler = (event, id) => {
+    const person = this.state.persons.findIndex();
     this.setState({
       persons: [
         { name: 'Joe', age: 28 },
@@ -54,7 +55,8 @@ class App extends Component {
               click={() => this.deletePersonHandler(index)} 
               name={person.name} 
               age={person.age} 
-              key={person.id} />
+              key={person.id}
+              changed={(event) => this.nameChangedHandler(event, person.id)} />
           })}
         </div>
       );
